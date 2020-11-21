@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="me.goldze.mvvmhabit.base.BaseViewModel" />
+
+        <variable
+            name="viewModel"
+            type="BaseViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="#F2F2F2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@mipmap/head"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="张诺言"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/Blue" />
+
+            <LinearLayout
+                android:id="@+id/ll_myclass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:background="?selectableItemBackgroundBorderless">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的课程"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="零基础入门拼读"
+                    android:textColor="@drawable/textview_select"
+                    android:textSize="15dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/Blue" />
+
+            <LinearLayout
+                android:id="@+id/word_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="?selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@mipmap/book" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="单词本"
+                    android:textColor="@drawable/textview_select"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/wrong_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:background="?selectableItemBackgroundBorderless">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/wrong_book" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="错词本"
+                    android:textColor="@drawable/textview_select"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <com.xwj.word.ui.learn.NoScrollViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+</layout>
